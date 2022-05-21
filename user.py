@@ -4,9 +4,10 @@ import logging
 from pathlib import Path
 
 BASE_DIR = Path(r"G:\Prog\Projet perso\UserGenerator\user.py").resolve().parent
-logging.basicConfig(filename=BASE_DIR / "user.log", level=logging.INFO)
-# logging.basicConfig(filename=BASE_DIR / "user.log", level=logging.INFO,
-#                     format='%(asctimes)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    filename=BASE_DIR / "user.log", 
+                    filemode="a",
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 fake = Faker(locale="fr_FR")
